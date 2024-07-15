@@ -12,4 +12,8 @@ import { FormsModule } from '@angular/forms';
 
 export class PasswordViewComponent {
   password: string= 'P4$5W0rD!';
+
+  copyText() {
+    
+  }
 }
