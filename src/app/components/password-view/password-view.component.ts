@@ -17,10 +17,13 @@ export class PasswordViewComponent {
 
   // Initialize the clipboard service to allow copying the password
   constructor(private clipboard: Clipboard) {
-
   }
-  copyText() {
-    this.clipboard.copy(this.password);
-    console.log(this.password);
+
+  copyText(): void {
+    navigator.clipboard.writeText(this.password).then(() => {
+      console.log('this clipboard was copied'+ this.password);
+    }).catch(() => {
+      console.log('Failed to copy this clipboard'+ this.password);
+    });
   }
 }
