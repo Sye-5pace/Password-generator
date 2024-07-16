@@ -8,6 +8,22 @@ $secondary-color: #24232C;
 $text-color: #E6E5EA;
 $header-txtcolor: #817D92;
 
+
+:root{
+  --body-bg : #111016;
+  --card-bg : #24232b;
+  --light-green: #a4ffaf;
+  --slider-thumb: #e6e5ed;
+  --strenth-check-bg: #18171f;
+  --strength-check-range: #facf67;
+  --text-color: #efeef4;
+  --text-fade: #7b7986;
+  --dark-orange: #f64a4a;
+  --light-orange: #fb7c58;
+  --light-yellow: #f8cd65;
+}
+
+
 .jetbrains-mono {
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
