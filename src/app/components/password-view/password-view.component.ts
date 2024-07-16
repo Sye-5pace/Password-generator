@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
 
@@ -12,9 +12,15 @@ import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
 })
 
 export class PasswordViewComponent {
-  password: string= 'P4$5W0rD!';
+  @Input() password!: string;
 
+
+  // Initialize the clipboard service to allow copying the password
+  constructor(private clipboard: Clipboard) {
+
+  }
   copyText() {
-
+    this.clipboard.copy(this.password);
+    console.log(this.password);
   }
 }

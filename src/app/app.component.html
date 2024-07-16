@@ -1,7 +1,9 @@
 <body>
   <h1>Password Generator</h1>
   <div id="container">
-    <app-password-view></app-password-view>
-    <app-generator-settings ></app-generator-settings>
+    <app-password-view [password]="password" />
+    <app-generator-settings
+    (generatedPassword)="password = $event">
+    </app-generator-settings>
   </div>
 </body>

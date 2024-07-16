@@ -53,19 +53,18 @@
   width: 100%;
 }
 
-.settings .charlength{
+.settings .char-length{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // background: red;
   height: 2rem;
 }
 
-.settings .charlength p:first-child {
+.settings .char-length p:first-child {
   color: var(--text-color);
   font-size: 18px;
 }
-.settings .charlength p:last-child {
+.settings .char-length p:last-child {
   color: var(--light-green);
   font-size: 30px;
   font-weight: 600;
@@ -130,15 +129,7 @@
   background: transparent;
 }
 
-// .settings #char-range::-webkit-slider-thumb {
-//     width: 20px;
-//     height: 20px;
-//     background: var(--slider-thumb);
-//     cursor: pointer;
-//     border-radius: 50%;
-//     border: none;
-//     // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-// }
+
 
 .settings #char-range::-webkit-slider-runnable-track {
   background: var(--light-green);
@@ -168,7 +159,7 @@
 .settings .criterias .secondcheck input,
 .settings .criterias .thirdcheck input,
 .settings .criterias .fourthcheck input {
-  appearance: none;
+  // appearance: none;
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
@@ -239,8 +230,6 @@
 }
 .settings .pwStrengthCheck .strChecker{
   display: flex;
-  // width: 32%;
-  // background: red;
   height: 4.5rem;
   justify-content: space-between;
   align-items: center;
@@ -308,10 +297,10 @@
       height: 20px;
   }
 
-  .settings .charlength p:first-child {
+  .settings .char-length p:first-child {
       font-size: 15px;
   }
-  .settings .charlength p:last-child {
+  .settings .char-length p:last-child {
       font-size: 24px;
   }
 
