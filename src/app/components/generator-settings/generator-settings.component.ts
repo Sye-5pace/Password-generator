@@ -1,17 +1,21 @@
 import { Component,  EventEmitter,  Input, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-generator-settings',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './generator-settings.component.html',
   styleUrl: './generator-settings.component.scss'
 })
 
+
+
 export class GeneratorSettingsComponent {
   @Input() password!: string;
   @Output() generatedPassword = new EventEmitter<string>();
+  passwordStrength: string = 'Medium';
   charLength: number = 10;
   progressBar: number = 10;
   uppercase: boolean = true;
@@ -19,9 +23,30 @@ export class GeneratorSettingsComponent {
   numbers: boolean = true;
   symbols: boolean = false;
 
-  checkPassword(){
-    
+  checkStrength() {
+    const hasLowercase = /[a-z]/.test(this.password);
+    const hasUppercase = /[A-Z]/.test(this.password);
+    const hasDigits = /\d/.test(this.password);
+    const hasSpecialChars = /[!@#$%^&*()\-=+[{\]}\\|;:'",<.>\/?]/.test(this.password);
+
+    const typesCount = [hasLowercase, hasUppercase, hasDigits, hasSpecialChars].filter(Boolean).length;
+
+    switch (true) {
+      case this.password.length < 8:
+        this.passwordStrength = 'Too Weak';
+        break;
+      case this.password.length >= 8 && typesCount === 1:
+        this.passwordStrength = 'Weak';
+        break;
+      case this.password.length >= 8 && this.password.length < 12 && typesCount >= 2:
+        this.passwordStrength = 'Medium';
+        break;
+      default:
+        this.passwordStrength = 'Strong';
+    }
   }
+
+
 
 
 
@@ -49,6 +74,7 @@ export class GeneratorSettingsComponent {
       this.password += charSet.charAt(Math.floor(Math.random() * charSet.length));
     }
     this.generatedPassword.emit(this.password);
+    this.checkStrength()
     return this.password;
   }
 
