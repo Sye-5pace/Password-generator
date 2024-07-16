@@ -44,7 +44,6 @@ export class GeneratorSettingsComponent {
     this.generatedPassword.emit(this.password);
     return this.password;
   }
-
 }
 
 

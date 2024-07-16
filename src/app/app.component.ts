@@ -13,5 +13,4 @@ import { PasswordViewComponent } from './components/password-view/password-view.
 
 export class AppComponent {
   password: string = 'P4$5W0rD!';
-
 }
