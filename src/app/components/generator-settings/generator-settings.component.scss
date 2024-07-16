@@ -25,78 +25,10 @@
   font-weight: 600;
 }
 
-.settings #char-range {
-  width: 100%;
-  height: 6px;
-  -webkit-appearance: none;
-  appearance: none;
-  background: var(--strenth-check-bg);
-  background-image: linear-gradient(var(--light-green), var(--light-green));
-  background-size: 50%, 100%;
-  background-repeat: no-repeat;
-  margin: 1rem 0 1.5rem 0;
-}
-
 .strChecker {
   width: 5rem;
   gap: 4rem;
 
-}
-
-/////////// FOR CHROME BROWSWER ///////////////
-.settings #char-range::-webkit-slider-thumb{
-  -webkit-appearnace: none;
-  height: 20px;
-  width: 20px;
-  border: 2px solid var(--slider-thumb);
-  border-radius: 50%;
-  background: var(--slider-thumb);
-  cursor: pointer;
-}
-
-.settings #char-range::-webkit-slider-thumb:hover{
-  border: 2px solid var(--light-green);
-  background: var(--body-bg);
-}
-
-.settings #char-range::-webkit-slider-runnable-track{
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: none;
-  background: transparent;
-}
-
-/////////// FOR MOZILLA BROWSWER ///////////////
-.settings #char-range::-moz-range-thumb {
-  -webkit-appearnace: none;
-  height: 20px;
-  width: 20px;
-  border: 2px solid var(--slider-thumb);
-  border-radius: 50%;
-  background: var(--slider-thumb);
-  cursor: pointer;
-}
-
-.settings #char-range::-moz-range-thumb:hover {
-  border: 2px solid var(--light-green);
-  background: var(--body-bg);
-}
-
-.settings #char-range::-moz-range-progress {
-  -webkit-appearance: none;
-  appearance: none;
-  box-shadow: none;
-  border: none;
-  background: transparent;
-}
-
-
-
-.settings #char-range::-webkit-slider-runnable-track {
-  background: var(--light-green);
-}
-.settings #char-range::-moz-range-track {
-  background: var(--light-green);
 }
 
 ////////////// CUSTOM CHECKBOXES //////////////
@@ -258,54 +190,22 @@
     margin: 1rem 0 1.5rem 0;
     background: var(--body-bg)
 }
-
-////////////////////FOR MOZILLA //////////////////////
- #char-range::-moz-range-progress {
+#char-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  height: 6px;
-  background: var(--light-green);
-}
- #char-range::-moz-range-track {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 0px;
-  background: transprent;
-}
- #char-range::-moz-range-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 20px;
-  width: 20px;
+  background: var(--text-color);
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
-  border: 2px solid var(--slider-thumb);
-  background: var(--slider-thumb);
+}
+#char-range::-webkit-slider-thumb:hover {
+  background: var(--body-bg);
+  border: 2px solid var(--light-green);
   cursor: pointer;
 }
- #char-range::-moz-range-thumb:hover{
-    background: var(--body-bg);
-    border: 2px solid var(--light-green);
+#char-range::-webkit-slider-runnable-track {
+  // -webkit-appearance: none;
+  // appearance: none;
+  // background: red;
 }
 
-////////////////////FOR CHROME //////////////////////
- #char-range::-webkit-slider-runnable-track {
-    -webkit-appearance: none;
-    appearance: none;
-    height: 0px;
-    background: red;
-}
- #char-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    height: 20px;
-    width: 10px;
-    border-radius: 50%;
-    background: var(--slider-thumb);
-    cursor: pointer;
-    position: relative;
-    top: -.6rem;
-}
- #char-range::-webkit-slider-thumb:hover {
-    border:2px solid var(--light-green);
-    background: var(--body-bg);
-}
