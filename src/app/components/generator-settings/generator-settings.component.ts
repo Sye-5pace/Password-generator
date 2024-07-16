@@ -19,6 +19,13 @@ export class GeneratorSettingsComponent {
   numbers: boolean = true;
   symbols: boolean = false;
 
+  checkPassword(){
+    
+  }
+
+
+
+  //random generator password string
   generatePassword() {
     // Implement password generation logic here
     let charSet = '';
@@ -44,6 +51,7 @@ export class GeneratorSettingsComponent {
     this.generatedPassword.emit(this.password);
     return this.password;
   }
+
 }
 
 
