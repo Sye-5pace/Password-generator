@@ -1,5 +1,10 @@
 @import '../../../styles.scss';
-
+@media only screen and (min-width: 375px) {
+  body{
+    width: 100%;
+    min-height: 100vh;
+  }
+}
 .settings {
   background: $secondary-color;
   padding-right: 2rem;
@@ -142,6 +147,7 @@
   height: 3rem;
   margin-bottom: 0;
   display: flex;
+  margin-left: 2rem;
   align-items: center;
 }
 

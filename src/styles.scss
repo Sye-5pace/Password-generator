@@ -38,3 +38,9 @@ $header-txtcolor: #817D92;
   width: 100%;
 }
 
+@media only screen and (min-width: 375px) {
+  body{
+    width: 100%;
+    min-height: 100vh;
+  }
+}
