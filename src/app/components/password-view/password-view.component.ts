@@ -13,6 +13,7 @@ import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
 
 export class PasswordViewComponent {
   @Input() password!: string;
+  copied: boolean = false;
 
 
   // Initialize the clipboard service to allow copying the password
@@ -20,10 +21,17 @@ export class PasswordViewComponent {
   }
 
   copyText(): void {
-    navigator.clipboard.writeText(this.password).then(() => {
-      console.log('this clipboard was copied'+ this.password);
-    }).catch(() => {
-      console.log('Failed to copy this clipboard'+ this.password);
-    });
+    if(this.password !== ''){
+      navigator.clipboard.writeText(this.password)
+      .then(() => {
+        this.copied = true;
+        setTimeout(() => {
+          this.copied = false;
+        }, 1500);
+        console.log('this clipboard was copied'+ this.password);
+      }).catch(() => {
+        console.log('Failed to copy this clipboard'+ this.password);
+      });
+    }
   }
 }

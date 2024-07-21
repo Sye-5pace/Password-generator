@@ -22,6 +22,7 @@ export class GeneratorSettingsComponent {
   lowercase: boolean = true;
   numbers: boolean = true;
   symbols: boolean = false;
+  copied: boolean = false;
 
   checkStrength() {
     const hasLowercase = /[a-z]/.test(this.password);
@@ -45,9 +46,6 @@ export class GeneratorSettingsComponent {
         this.passwordStrength = 'Strong';
     }
   }
-
-
-
 
 
   //random generator password string
