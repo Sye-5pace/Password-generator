@@ -269,14 +269,17 @@
   height: 12x;
 }
 
-.settings button:hover{
+.settings button:hover, #svg:hover{
   color: $strong-color;
   background: $primary-color;
 }
 
-#arrow-svg:hover{
-  color: $strong-color;
-  background: $primary-color;
+.settings button svg path {
+  transition: fill 0.3s ease;
+}
+
+.settings button:hover svg path {
+  fill: $strong-color;
 }
 
  #char-range {
