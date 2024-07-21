@@ -22,7 +22,8 @@
   font-size: 18px;
 }
 .settings .char-length p:last-child {
-  margin-right: -22rem;
+  margin-right: -25rem;
+  margin-left: 1rem;
   color: $strong-color;
   font-size: 30px;
   font-weight: 600;
@@ -145,6 +146,8 @@
 }
 
 .settings .strengthCheck .strChecker .strengthbars{
+  position: fixed;
+  margin-left: 8.75rem;
   display: flex;
   gap: 7px;
 }
